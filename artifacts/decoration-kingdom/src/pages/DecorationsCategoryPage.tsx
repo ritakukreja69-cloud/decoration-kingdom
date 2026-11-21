@@ -105,7 +105,7 @@ export function DecorationsCategoryPage() {
             <p className="text-white/70 text-sm mt-1">Available 24×7 · Delhi NCR</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a href="tel:9310854642" className="inline-flex items-center gap-2 rounded-full px-6 py-3 bg-gradient-primary text-white font-bold text-sm shadow-pink"><Phone className="w-4 h-4" /> Call 9310854642</a>
+            <a href="tel:9971265244" className="inline-flex items-center gap-2 rounded-full px-6 py-3 bg-gradient-primary text-white font-bold text-sm shadow-pink"><Phone className="w-4 h-4" /> Call 9971265244</a>
             <Link href="/decorations" className="inline-flex items-center gap-2 rounded-full px-6 py-3 border border-[color:var(--gold)]/50 text-[color:var(--gold)] font-semibold text-sm hover:bg-[color:var(--gold)]/10"><Heart className="w-4 h-4" /> Browse All Categories</Link>
           </div>
         </div>

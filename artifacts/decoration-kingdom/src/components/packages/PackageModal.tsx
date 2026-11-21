@@ -229,7 +229,7 @@ export function PackageModal({ pkg, onClose }: { pkg: PackageItem | null; onClos
                   <motion.a
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
-                    href="tel:9310854642"
+                    href="tel:9971265244"
                     className="flex-1 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-white font-bold text-sm bg-gradient-primary shadow-pink"
                   >
                     <Phone className="w-4 h-4" /> Book Now

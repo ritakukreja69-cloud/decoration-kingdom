@@ -136,8 +136,8 @@ export function PrivacyPolicyPage() {
                   <div className="font-semibold text-[color:var(--purple-deep)]">Decoration Kingdom</div>
                   <div>Delhi–NCR</div>
                   <div className="flex flex-wrap items-center gap-4">
-                    <a href="tel:9310854642" className="inline-flex items-center gap-2 hover:text-[color:var(--pink)]">
-                      <Phone className="w-4 h-4 text-[color:var(--pink)]" /> 9310854642
+                    <a href="tel:9971265244" className="inline-flex items-center gap-2 hover:text-[color:var(--pink)]">
+                      <Phone className="w-4 h-4 text-[color:var(--pink)]" /> 9971265244
                     </a>
                     <a href="tel:9971265244" className="inline-flex items-center gap-2 hover:text-[color:var(--pink)]">
                       <Phone className="w-4 h-4 text-[color:var(--pink)]" /> 9971265244

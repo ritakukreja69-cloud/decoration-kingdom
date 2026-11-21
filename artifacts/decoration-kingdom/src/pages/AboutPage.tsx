@@ -78,7 +78,7 @@ export function AboutPage() {
               <Link href="/packages" className="inline-flex items-center gap-2 rounded-full px-6 py-3 bg-gradient-primary text-white font-bold text-sm shadow-pink">
                 Browse Packages <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="tel:9310854642" className="inline-flex items-center gap-2 rounded-full px-6 py-3 border-2 border-[color:var(--purple-deep)] text-[color:var(--purple-deep)] font-bold text-sm">
+              <a href="tel:9971265244" className="inline-flex items-center gap-2 rounded-full px-6 py-3 border-2 border-[color:var(--purple-deep)] text-[color:var(--purple-deep)] font-bold text-sm">
                 <Phone className="w-4 h-4" /> Call us
               </a>
             </div>

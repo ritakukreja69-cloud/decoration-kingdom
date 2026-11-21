@@ -112,7 +112,7 @@ export function KidsThemeSubcategoryPage() {
                 <li>• Full setup and on-site styling across Delhi NCR.</li>
               </ul>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a href="tel:9310854642" className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-primary px-6 py-3 text-white font-semibold text-sm shadow-pink">
+                <a href="tel:9971265244" className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-primary px-6 py-3 text-white font-semibold text-sm shadow-pink">
                   <Heart className="w-4 h-4" /> Call to Book
                 </a>
                 <Link

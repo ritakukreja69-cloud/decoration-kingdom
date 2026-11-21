@@ -91,10 +91,10 @@ export function PackagesPage() {
             <motion.a
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              href="tel:9310854642"
+              href="tel:9971265244"
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 bg-gradient-primary text-white font-bold text-sm shadow-pink"
             >
-              <Phone className="w-4 h-4" /> Call 9310854642
+              <Phone className="w-4 h-4" /> Call 9971265244
             </motion.a>
             <Link
               href="/"

@@ -61,7 +61,7 @@ export function PackageDetailPage() {
   const waMessage = encodeURIComponent(
     `Hi Decoration Kingdom! I'd like to book the "${pkg.title}" package (${inr(pkg.price)}). Please share availability.`
   );
-  const waHref = `https://wa.me/919310854642?text=${waMessage}`;
+  const waHref = `https://wa.me/919971265244?text=${waMessage}`;
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -185,10 +185,10 @@ export function PackageDetailPage() {
               </a>
             </div>
             <a
-              href="tel:9310854642"
+              href="tel:9971265244"
               className="mt-3 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-[color:var(--pink)]"
             >
-              <Phone className="w-4 h-4" /> Or call 9310854642 · Available 24×7
+              <Phone className="w-4 h-4" /> Or call 9971265244 · Available 24×7
             </a>
 
             {/* Inclusions */}
@@ -291,7 +291,7 @@ function BookingForm({ packageTitle, price, waHref }: { packageTitle: string; pr
       `Name: ${form.name}\nPhone: ${form.phone}\nEvent date: ${form.date}\nCity: ${form.city}\n` +
       `Notes: ${form.notes || "—"}`
     );
-    window.open(`https://wa.me/919310854642?text=${msg}`, "_blank", "noopener");
+    window.open(`https://wa.me/919971265244?text=${msg}`, "_blank", "noopener");
     setSubmitted(true);
   }
 
@@ -311,7 +311,7 @@ function BookingForm({ packageTitle, price, waHref }: { packageTitle: string; pr
           <a href={WHATSAPP_BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full px-5 py-3 bg-gradient-primary text-white text-sm font-bold shadow-pink">
             <MessageCircle className="w-4 h-4" /> Open WhatsApp again
           </a>
-          <a href="tel:9310854642" className="inline-flex items-center gap-2 rounded-full px-5 py-3 border-2 border-[color:var(--purple-deep)] text-[color:var(--purple-deep)] text-sm font-bold">
+          <a href="tel:9971265244" className="inline-flex items-center gap-2 rounded-full px-5 py-3 border-2 border-[color:var(--purple-deep)] text-[color:var(--purple-deep)] text-sm font-bold">
             <Phone className="w-4 h-4" /> Call us
           </a>
         </div>
