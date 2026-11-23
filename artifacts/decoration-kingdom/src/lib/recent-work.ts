@@ -1,4 +1,3 @@
-import recentTeddyBirthday from "@/assets/recent-work-teddy-first-birthday.png";
 import { getPackages, type PackageItem } from "@/lib/packages-catalog";
 
 export type RecentWorkItem = Omit<PackageItem, "id"> & {
@@ -7,10 +6,10 @@ export type RecentWorkItem = Omit<PackageItem, "id"> & {
 };
 
 const kidsThemeWork: RecentWorkItem[] = getPackages("kids-theme")
+  .filter((pkg) => pkg.id !== "kids-theme-3")
   .map((pkg) => ({
     ...pkg,
-    slug: pkg.id === "kids-theme-3" ? "teddy-first-birthday" : pkg.id,
-    image: pkg.id === "kids-theme-3" ? recentTeddyBirthday : pkg.image,
+    slug: pkg.id,
     collectionHref: `/packages/collection/${pkg.category}`,
   }));
 
