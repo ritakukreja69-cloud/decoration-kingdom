@@ -1027,14 +1027,14 @@ export function HomePage() {
                         <div className="aspect-[4/3] overflow-hidden bg-white">
                           <img
                             src={work.image}
-                            alt={duplicate ? "" : work.title}
+                            alt={duplicate ? "" : work.name}
                             loading="lazy"
                             className="h-full w-full object-contain p-2 transition-transform duration-700 group-hover:scale-[1.02]"
                           />
                         </div>
                         <div className="p-5">
-                          <p className="text-xs font-bold uppercase tracking-[0.15em] text-[color:var(--pink)]">{work.category}</p>
-                          <h3 className="mt-2 font-display text-xl font-black text-[color:var(--purple-deep)]">{work.title}</h3>
+                          <p className="text-xs font-bold uppercase tracking-[0.15em] text-[color:var(--pink)]">{work.categoryLabel}</p>
+                          <h3 className="mt-2 font-display text-xl font-black text-[color:var(--purple-deep)]">{work.name}</h3>
                           <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-foreground/75">{work.description}</p>
                           <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[color:var(--pink)]">
                             View celebration details
