@@ -1,27 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
+import { mascotCharacters } from "@/lib/mascot-characters";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
-
-const mascotCharacters = [
-  { name: "Mouse character", icon: "🐭" },
-  { name: "Bow character", icon: "🎀" },
-  { name: "Bear", icon: "🧸" },
-  { name: "Unicorn", icon: "🦄" },
-  { name: "Panda", icon: "🐼" },
-  { name: "Gorilla", icon: "🦍" },
-  { name: "Dinosaur", icon: "🦖" },
-  { name: "Lion", icon: "🦁" },
-  { name: "Rabbit", icon: "🐰" },
-  { name: "Elephant", icon: "🐘" },
-  { name: "Tiger", icon: "🐯" },
-  { name: "Monkey", icon: "🐵" },
-  { name: "Princess", icon: "👸" },
-  { name: "Superhero", icon: "🦸" },
-  { name: "Duck", icon: "🦆" },
-  { name: "Bumblebee", icon: "🐝" },
-  { name: "Penguin", icon: "🐧" },
-  { name: "Snowman", icon: "⛄" },
-];
 
 export function MascotBookingLink({ packageName }: { packageName: string }) {
   const bookingUrl = new URL(WHATSAPP_BOOKING_URL);

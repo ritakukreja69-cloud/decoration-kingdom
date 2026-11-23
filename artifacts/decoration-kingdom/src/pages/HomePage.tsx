@@ -34,6 +34,7 @@ import sequinHero    from "@/assets/pkg/sequin-decoration/_/sequin-01.png";
 import { categories as collectionCategories } from "@/lib/packages-catalog";
 import { recentWorkItems } from "@/lib/recent-work";
 import { CollectionBanner } from "@/components/packages/CollectionBanner";
+import { HomeMascotSection } from "@/components/HomeMascotSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const romanticCelebrations = [
@@ -915,6 +916,8 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      <HomeMascotSection />
 
       {/* BIRTHDAY PROMOTION */}
       <section className="bg-white py-10 md:py-14">
