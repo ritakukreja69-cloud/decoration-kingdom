@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Clock3, MapPin, Shirt, Sparkles, Truck, UserRound } from "lucide-react";
 
-import { mascotCharacters } from "@/lib/mascot-characters";
+import mascotCostumes from "@/assets/mascot-costumes.png";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 
 const inclusions = [
@@ -92,21 +92,16 @@ export function HomeMascotSection() {
 
             <div className="mt-5 border-t border-orange-100 pt-5">
               <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.14em] text-slate-500">
-                Choose a party favourite
+                Meet our mascot characters
               </p>
-              <ul className="grid grid-cols-6 gap-2 sm:grid-cols-9" aria-label="Mascot character styles">
-                {mascotCharacters.map((character, index) => (
-                  <li
-                    key={character.name}
-                    title={character.name}
-                    className={`grid aspect-square place-items-center rounded-xl text-xl transition duration-200 hover:-translate-y-1 hover:scale-110 sm:text-2xl ${
-                      index % 2 === 0 ? "bg-orange-50" : "bg-amber-50"
-                    }`}
-                  >
-                    <span role="img" aria-label={character.name}>{character.icon}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-orange-100">
+                <img
+                  src={mascotCostumes}
+                  alt="Wearable mascot costumes: Mickey, Minnie, Unicorn, Teddy Bear, Panda and Gorilla"
+                  loading="lazy"
+                  className="h-auto max-h-[34rem] w-full object-contain transition-transform duration-500 hover:scale-[1.02]"
+                />
+              </div>
             </div>
 
             <div className="mt-5 grid gap-2 rounded-2xl bg-orange-50/80 p-4 text-xs leading-relaxed text-slate-600 sm:grid-cols-2 sm:text-sm">
