@@ -2,21 +2,74 @@ import { ArrowRight } from "lucide-react";
 
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 
+const mascotCharacters = [
+  { name: "Mouse character", icon: "🐭" },
+  { name: "Bow character", icon: "🎀" },
+  { name: "Bear", icon: "🧸" },
+  { name: "Unicorn", icon: "🦄" },
+  { name: "Panda", icon: "🐼" },
+  { name: "Gorilla", icon: "🦍" },
+  { name: "Dinosaur", icon: "🦖" },
+  { name: "Lion", icon: "🦁" },
+  { name: "Rabbit", icon: "🐰" },
+  { name: "Elephant", icon: "🐘" },
+  { name: "Tiger", icon: "🐯" },
+  { name: "Monkey", icon: "🐵" },
+  { name: "Princess", icon: "👸" },
+  { name: "Superhero", icon: "🦸" },
+  { name: "Duck", icon: "🦆" },
+  { name: "Bumblebee", icon: "🐝" },
+  { name: "Penguin", icon: "🐧" },
+  { name: "Snowman", icon: "⛄" },
+];
+
 export function MascotBookingLink({ packageName }: { packageName: string }) {
   const bookingUrl = new URL(WHATSAPP_BOOKING_URL);
   bookingUrl.searchParams.set(
     "text",
-    `Hello Decoration Kingdom! I'd like to add a fun mascot to the "${packageName}" package. Please share available characters and booking details.`,
+    `Hello Decoration Kingdom! I'd like to add a cartoon mascot to the "${packageName}" package. Please share available characters and booking details.`,
   );
 
   return (
-    <div className="mt-4 rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-3.5">
-      <p className="text-xs font-extrabold leading-snug text-[color:var(--purple-deep)] sm:text-sm">
-        🎭 Make Your Celebration Extra Special!
+    <div className="mt-4 rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-50 p-3.5">
+      <div className="flex items-start justify-between gap-2">
+        <div>
+          <p className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-orange-700 sm:text-xs">
+            🎭 Cartoon Mascot Price
+          </p>
+          <p className="mt-1 text-lg font-black leading-tight text-[color:var(--purple-deep)]">
+            ₹4,500 <span className="text-xs font-bold text-slate-600">per mascot</span>
+          </p>
+          <p className="text-[11px] font-semibold text-slate-600">Up to 3 hours of event service</p>
+        </div>
+        <span className="rounded-full bg-white px-2 py-1 text-[10px] font-extrabold text-orange-800 shadow-sm">
+          ALL INCLUDED
+        </span>
+      </div>
+
+      <p className="mt-2 text-[11px] font-semibold leading-relaxed text-slate-700 sm:text-xs">
+        👘 Costume · 👨‍🎨 Artist · 🚆 Transport included
       </p>
-      <p className="mt-1 text-xs text-muted-foreground">
-        Add a Fun Mascot to Your Package – Book Now!
+
+      <div className="mt-2 flex flex-wrap gap-1" aria-label="Available mascot character styles">
+        {mascotCharacters.map((character) => (
+          <span
+            key={character.name}
+            role="img"
+            aria-label={character.name}
+            title={character.name}
+            className="grid h-6 w-6 place-items-center rounded-full bg-white text-sm shadow-sm"
+          >
+            {character.icon}
+          </span>
+        ))}
+      </div>
+
+      <p className="mt-2 border-t border-amber-200/80 pt-2 text-[10px] leading-relaxed text-slate-600 sm:text-[11px]">
+        <span className="font-bold text-slate-700">NOTE:</span> After 3 hours: ₹1,000/hour · Service until 10 PM ·
+        Outside city limits: additional travel charges apply.
       </p>
+
       <a
         href={bookingUrl.toString()}
         target="_blank"
