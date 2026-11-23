@@ -999,37 +999,51 @@ export function HomePage() {
               A little glimpse of a birthday celebration we recently decorated.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {recentWorkItems.map((work, index) => (
-              <Link key={work.slug} href={`/recent-work/${work.slug}`} className="group block">
-                <motion.article
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ delay: index * 0.06 }}
-                  whileHover={{ y: -6 }}
-                  className="h-full overflow-hidden rounded-3xl border border-border/60 bg-gradient-soft shadow-card transition-shadow hover:shadow-pink"
+          <div
+            aria-label="Recent work"
+            className="recent-work-marquee overflow-hidden"
+          >
+            <div className="recent-work-track flex w-max">
+              {[false, true].map((duplicate) => (
+                <div
+                  key={duplicate ? "duplicate" : "original"}
+                  aria-hidden={duplicate}
+                  className="recent-work-group flex gap-6 pr-6"
                 >
-                  <div className="aspect-[4/3] overflow-hidden bg-white">
-                    <img
-                      src={work.image}
-                      alt={work.title}
-                      loading="lazy"
-                      className="h-full w-full object-contain p-2 transition-transform duration-700 group-hover:scale-[1.02]"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-[color:var(--pink)]">{work.category}</p>
-                    <h3 className="mt-2 font-display text-xl font-black text-[color:var(--purple-deep)]">{work.title}</h3>
-                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-foreground/75">{work.description}</p>
-                    <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[color:var(--pink)]">
-                      View celebration details
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </div>
-                </motion.article>
-              </Link>
-            ))}
+                  {recentWorkItems.map((work) => (
+                    <Link
+                      key={work.slug}
+                      href={`/recent-work/${work.slug}`}
+                      tabIndex={duplicate ? -1 : undefined}
+                      className="group block w-[min(82vw,340px)] shrink-0"
+                    >
+                      <motion.article
+                        whileHover={{ y: -6 }}
+                        className="h-full overflow-hidden rounded-3xl border border-border/60 bg-gradient-soft shadow-card transition-shadow hover:shadow-pink"
+                      >
+                        <div className="aspect-[4/3] overflow-hidden bg-white">
+                          <img
+                            src={work.image}
+                            alt={duplicate ? "" : work.title}
+                            loading="lazy"
+                            className="h-full w-full object-contain p-2 transition-transform duration-700 group-hover:scale-[1.02]"
+                          />
+                        </div>
+                        <div className="p-5">
+                          <p className="text-xs font-bold uppercase tracking-[0.15em] text-[color:var(--pink)]">{work.category}</p>
+                          <h3 className="mt-2 font-display text-xl font-black text-[color:var(--purple-deep)]">{work.title}</h3>
+                          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-foreground/75">{work.description}</p>
+                          <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[color:var(--pink)]">
+                            View celebration details
+                            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                          </span>
+                        </div>
+                      </motion.article>
+                    </Link>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

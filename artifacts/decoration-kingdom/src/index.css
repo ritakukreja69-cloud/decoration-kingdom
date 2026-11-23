@@ -112,3 +112,21 @@
 @utility animate-float-balloon { animation: float-balloon 6s ease-in-out infinite; }
 @utility animate-float-slow { animation: float-slow 4s ease-in-out infinite; }
 @utility animate-pulse-ring { animation: pulse-ring 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+
+@keyframes recent-work-scroll {
+  to { transform: translateX(-50%); }
+}
+
+.recent-work-track {
+  animation: recent-work-scroll 36s linear infinite;
+}
+
+.recent-work-marquee:hover .recent-work-track,
+.recent-work-marquee:focus-within .recent-work-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recent-work-marquee { overflow-x: auto; }
+  .recent-work-track { animation: none; }
+}
