@@ -27,7 +27,7 @@ function AppRoutes() {
       <Route path="/blog" component={BlogPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />
-      <Route path="/recent-work/teddy-first-birthday" component={RecentWorkDetailPage} />
+      <Route path="/recent-work/:slug" component={RecentWorkDetailPage} />
       <Route path="/packages" component={PackagesPage} />
       <Route path="/packages/collection/:category/:sub" component={PackagesSubCollectionPage} />
       <Route path="/packages/collection/:category" component={PackagesCollectionPage} />

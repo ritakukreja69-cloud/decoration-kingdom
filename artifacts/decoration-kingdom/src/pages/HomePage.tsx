@@ -8,7 +8,6 @@ import {
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import heroImg from "@/assets/hero-birthday.jpg";
-import recentTeddyBirthday from "@/assets/recent-work-teddy-first-birthday.png";
 import specBirthday from "@/assets/spec-birthday.jpg";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 import specWedding from "@/assets/spec-wedding.jpg";
@@ -33,6 +32,7 @@ import christmasDecorationImage from "@/assets/pkg/christmas-decoration/_/01-can
 import ringPackage01Image from "@/assets/pkg/ring-ceremony/_custom/ring-package-01.png";
 import sequinHero    from "@/assets/pkg/sequin-decoration/_/sequin-01.png";
 import { categories as collectionCategories } from "@/lib/packages-catalog";
+import { recentWorkItems } from "@/lib/recent-work";
 import { CollectionBanner } from "@/components/packages/CollectionBanner";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -999,35 +999,37 @@ export function HomePage() {
               A little glimpse of a birthday celebration we recently decorated.
             </p>
           </div>
-          <div className="max-w-3xl mx-auto">
-            <Link href="/recent-work/teddy-first-birthday" className="group block">
-              <motion.div
-                whileHover={{ y: -6 }}
-                className="grid md:grid-cols-2 overflow-hidden rounded-3xl bg-gradient-soft border border-border/60 shadow-card transition-shadow hover:shadow-pink"
-              >
-                <div className="aspect-[3/4] md:aspect-auto md:min-h-[420px] overflow-hidden">
-                  <img
-                    src={recentTeddyBirthday}
-                    alt="Teddy bear first birthday decoration with pink and rose-gold balloons"
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-col justify-center p-6 md:p-9">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--pink)]">Birthday · First Birthday</p>
-                  <h3 className="mt-3 font-display text-2xl md:text-3xl font-black text-[color:var(--purple-deep)]">
-                    Teddy Bear Birthday Celebration
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/75">
-                    Pink, white and rose-gold balloons, a cuddly teddy detail and a shining number one make this celebration extra special.
-                  </p>
-                  <span className="mt-6 inline-flex items-center gap-2 font-bold text-sm text-[color:var(--pink)]">
-                    View celebration details
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </motion.div>
-            </Link>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {recentWorkItems.map((work, index) => (
+              <Link key={work.slug} href={`/recent-work/${work.slug}`} className="group block">
+                <motion.article
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ delay: index * 0.06 }}
+                  whileHover={{ y: -6 }}
+                  className="h-full overflow-hidden rounded-3xl border border-border/60 bg-gradient-soft shadow-card transition-shadow hover:shadow-pink"
+                >
+                  <div className="aspect-[4/5] overflow-hidden bg-white">
+                    <img
+                      src={work.image}
+                      alt={work.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-[color:var(--pink)]">{work.category}</p>
+                    <h3 className="mt-2 font-display text-xl font-black text-[color:var(--purple-deep)]">{work.title}</h3>
+                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-foreground/75">{work.description}</p>
+                    <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[color:var(--pink)]">
+                      View celebration details
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </motion.article>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
