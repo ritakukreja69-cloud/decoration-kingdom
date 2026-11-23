@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 import { inr, type PackageItem } from "@/lib/packages-catalog";
+import { MascotBookingLink } from "@/components/packages/MascotBookingLink";
 
 export function PackageModal({ pkg, onClose }: { pkg: PackageItem | null; onClose: () => void }) {
   useEffect(() => {
@@ -133,6 +134,8 @@ export function PackageModal({ pkg, onClose }: { pkg: PackageItem | null; onClos
                     ))}
                   </ul>
                 </div>
+
+                <MascotBookingLink packageName={pkg.name} />
 
                 {/* Notes */}
                 {pkg.notes && (

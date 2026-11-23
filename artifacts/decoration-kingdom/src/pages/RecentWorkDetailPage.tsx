@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Check, Clock, Heart, MapPin, MessageCircle, Sparkles } from "lucide-react";
 
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { MascotBookingLink } from "@/components/packages/MascotBookingLink";
 import { inr } from "@/lib/packages-catalog";
 import { recentWorkItems } from "@/lib/recent-work";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
@@ -90,6 +91,8 @@ export function RecentWorkDetailPage() {
                   ))}
                 </ul>
               </div>
+
+              <MascotBookingLink packageName={work.name} />
 
               {work.notes && (
                 <div className="mt-4 rounded-xl border border-[color:var(--pink)]/20 bg-[color:var(--pink)]/8 px-4 py-3">

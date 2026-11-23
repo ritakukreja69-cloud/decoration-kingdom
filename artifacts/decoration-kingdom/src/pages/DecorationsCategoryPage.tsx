@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Clock, Heart, MapPin, Phone, Sparkles as SparkleIcon, Star } from "lucide-react";
 
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { MascotBookingLink } from "@/components/packages/MascotBookingLink";
 import { sections, inr } from "@/lib/packages-data";
 
 export function DecorationsCategoryPage() {
@@ -87,6 +88,7 @@ export function DecorationsCategoryPage() {
                     </div>
                     <span className="inline-flex items-center gap-1 text-[10px] text-muted-foreground"><Clock className="w-3 h-3" /> 2–4 hrs</span>
                   </div>
+                  <MascotBookingLink packageName={p.title} />
                   <Link href={`/packages/${p.slug}`} className="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-white font-semibold text-xs tracking-widest uppercase bg-gradient-primary shadow-pink hover:scale-[1.02] transition-transform">
                     View Details <ArrowRight className="w-4 h-4" />
                   </Link>

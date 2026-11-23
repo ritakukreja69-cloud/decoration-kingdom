@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { MascotBookingLink } from "@/components/packages/MascotBookingLink";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 import { findPackage, relatedPackages, inr } from "@/lib/packages-data";
 
@@ -207,6 +208,9 @@ export function PackageDetailPage() {
                 ))}
               </ul>
             </div>
+
+            <MascotBookingLink packageName={pkg.title} />
+
           </motion.div>
         </div>
       </section>

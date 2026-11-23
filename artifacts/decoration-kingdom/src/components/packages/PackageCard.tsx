@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Clock, Star } from "lucide-react";
 
 import { inr, type PackageItem } from "@/lib/packages-catalog";
+import { MascotBookingLink } from "@/components/packages/MascotBookingLink";
 
 export function PackageCard({
   pkg,
@@ -51,6 +52,8 @@ export function PackageCard({
             <p className="text-2xl font-black text-gradient-primary leading-none">{inr(pkg.price)}</p>
           </div>
         </div>
+
+        <MascotBookingLink packageName={pkg.name} />
 
         <button
           onClick={() => onView(pkg)}
