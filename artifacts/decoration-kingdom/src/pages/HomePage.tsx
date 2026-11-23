@@ -8,6 +8,7 @@ import {
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import heroImg from "@/assets/hero-birthday.jpg";
+import recentTeddyBirthday from "@/assets/recent-work-teddy-first-birthday.png";
 import specBirthday from "@/assets/spec-birthday.jpg";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 import specWedding from "@/assets/spec-wedding.jpg";
@@ -985,6 +986,51 @@ export function HomePage() {
         items={babyCelebrations}
         bg="bg-gradient-soft"
       />
+
+      {/* RECENT WORK */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="text-center mb-10">
+            <p className="font-script text-4xl md:text-5xl text-[color:var(--pink)]">Made with love</p>
+            <h2 className="font-display font-black text-3xl md:text-4xl text-[color:var(--purple-deep)] tracking-tight mt-1">
+              OUR <span className="text-[color:var(--pink)]">RECENT WORK</span>
+            </h2>
+            <p className="mt-3 text-sm md:text-base text-muted-foreground">
+              A little glimpse of a birthday celebration we recently decorated.
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            <Link href="/recent-work/teddy-first-birthday" className="group block">
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="grid md:grid-cols-2 overflow-hidden rounded-3xl bg-gradient-soft border border-border/60 shadow-card transition-shadow hover:shadow-pink"
+              >
+                <div className="aspect-[3/4] md:aspect-auto md:min-h-[420px] overflow-hidden">
+                  <img
+                    src={recentTeddyBirthday}
+                    alt="Teddy bear first birthday decoration with pink and rose-gold balloons"
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-col justify-center p-6 md:p-9">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--pink)]">Birthday · First Birthday</p>
+                  <h3 className="mt-3 font-display text-2xl md:text-3xl font-black text-[color:var(--purple-deep)]">
+                    Teddy Bear Birthday Celebration
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/75">
+                    Pink, white and rose-gold balloons, a cuddly teddy detail and a shining number one make this celebration extra special.
+                  </p>
+                  <span className="mt-6 inline-flex items-center gap-2 font-bold text-sm text-[color:var(--pink)]">
+                    View celebration details
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </motion.div>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* TESTIMONIALS */}
       <section className="py-16 md:py-20 bg-white">
