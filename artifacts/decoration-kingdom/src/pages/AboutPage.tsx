@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Award, Heart, Sparkles, Users, Clock, MapPin, ArrowRight, Phone } from "lucide-react";
 
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import heroImg from "@/assets/logo.png";
+import heroImg from "@/assets/hero-birthday.jpg";
 
 const stats = [
   { icon: Award, label: "Years of craft", value: "2+" },
@@ -47,8 +47,8 @@ export function AboutPage() {
       <section className="py-16 md:py-24 bg-gradient-soft">
         <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-card border border-[color:var(--gold)]/30">
-            <img src={heroImg} alt="Decoration Kingdom studio" className="w-full h-full object-cover" />
+            className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-[color:var(--gold)]/30">
+            <img src={heroImg} alt="Pink and gold balloon birthday decoration" className="w-full h-full object-cover" />
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <p className="font-script text-3xl text-[color:var(--pink)]">Who we are</p>
