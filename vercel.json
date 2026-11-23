@@ -9,7 +9,13 @@
       "root": "artifacts/decoration-kingdom",
       "framework": "vite",
       "buildCommand": "pnpm run build",
-      "outputDirectory": "dist/public"
+      "outputDirectory": "dist/public",
+      "rewrites": [
+        {
+          "source": "/(.*)",
+          "destination": "/index.html"
+        }
+      ]
     },
     "mockup-sandbox": {
       "root": "artifacts/mockup-sandbox",
