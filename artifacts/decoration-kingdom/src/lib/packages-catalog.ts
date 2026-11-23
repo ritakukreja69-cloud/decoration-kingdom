@@ -1750,7 +1750,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
   "ring-ceremony": [
     {
       name: "Rose Gold Anniversary Ring Stand Decoration",
-      price: 6999,
+      price: 7499,
       image: ringPackage01Image,
       duration: "2–4 Hours",
       area: "Indoor / Home Venue",
@@ -1768,7 +1768,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Pastel Birthday Ring Stand Decoration",
-      price: 4999,
+      price: 5499,
       image: ringPackage02Image,
       includes: [
         "1 Ring Stand",
@@ -1781,7 +1781,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Rose Gold & Silver Birthday Ring Decoration",
-      price: 9000,
+      price: 9500,
       image: ringPackage03Image,
       includes: [
         "1 Ring Stand",
@@ -1796,7 +1796,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Barbie Theme Ring Decoration",
-      price: 7999,
+      price: 8499,
       image: ringPackage04Image,
       includes: [
         "1 Barbie Printed Flex arranged on a ring setup",
@@ -1808,7 +1808,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     null,
     {
       name: "Starry Birthday Ring Decoration",
-      price: 7999,
+      price: 8499,
       includes: [
         "1 Ring Setup Decorated with Theme-Based Balloons",
         "Happy Birthday Neon Sign",
@@ -1822,7 +1822,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Mickey Minnie Colourful Ring Decoration",
-      price: 8999,
+      price: 9499,
       includes: [
         "1 Colourful Ring Setup using Theme-Based Balloons",
         "15–20 Silver-Golden Chrome Balloon Bunches",
@@ -1835,7 +1835,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Carnation Floral Ring Birthday Decoration",
-      price: 5899,
+      price: 6399,
       includes: [
         "1 Ring Setup Decorated with Balloons",
         "350 Pink-Purple-Blue Latex Balloons",
@@ -1846,7 +1846,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Red Gold Silver I Love You Ring Decoration",
-      price: 5999,
+      price: 6499,
       includes: [
         "Balloon ring made with 300–350 Golden-Silver Chrome and Red Latex Balloons",
         "50 Golden-Silver Chrome and Red Latex Balloons scattered on floor",
@@ -1857,7 +1857,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Pastel Baby Shower Ring Decoration",
-      price: 5499,
+      price: 5999,
       includes: [
         "1 Ring Setup Decorated with Balloons",
         "250–300 Pink-Blue Pastel Balloons",
@@ -1869,7 +1869,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Red and White Birthday Ring Pathway",
-      price: 6999,
+      price: 7499,
       includes: [
         "1 Ring Setup Decorated with Balloons",
         "250 Red-White Latex Balloons",
@@ -1881,7 +1881,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Colourful Love Birthday Ring Decoration",
-      price: 5999,
+      price: 6499,
       includes: [
         "1 Ring Setup Decorated with Balloons",
         "350 Theme-Based Balloons",
@@ -1894,7 +1894,7 @@ const packageOverrides: Record<string, (PackageOverride | null | undefined)[]> =
     },
     {
       name: "Blue and Gold Birthday Ring Decoration",
-      price: 5499,
+      price: 5999,
       includes: [
         "1 Ring Setup Decorated with Balloons",
         "130–140 Blue, Dark Blue, and Golden Chrome Balloons",
@@ -2091,7 +2091,7 @@ export const categories: CategoryDef[] = [
     eyebrow: "Ring Decorations",
     tagline: "Statement ring backdrops for engagements, ceremonies and the perfect 'yes'.",
     banner: bannerFor("ring-ceremony"),
-    basePrice: 6999,
+    basePrice: 7499,
     priceStep: 800,
     duration: "3–4 hours",
     area: "Indoor hall / banquet, up to 300 sq.ft",
