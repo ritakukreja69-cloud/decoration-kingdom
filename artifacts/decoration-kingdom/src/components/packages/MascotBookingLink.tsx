@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 
-import { mascotCharacters } from "@/lib/mascot-characters";
+import { mascotGallery } from "@/lib/mascot-gallery";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 
 export function MascotBookingLink({ packageName }: { packageName: string }) {
@@ -31,17 +31,20 @@ export function MascotBookingLink({ packageName }: { packageName: string }) {
         👘 Costume · 👨‍🎨 Artist · 🚆 Transport included in mascot price
       </p>
 
-      <div className="mt-2 flex flex-wrap gap-1" aria-label="Available mascot character styles">
-        {mascotCharacters.map((character) => (
-          <span
+      <div className="mt-2 flex gap-1.5" aria-label="Available mascot character styles">
+        {mascotGallery.map((character) => (
+          <div
             key={character.name}
-            role="img"
-            aria-label={character.name}
-            title={character.name}
-            className="grid h-6 w-6 place-items-center rounded-full bg-white text-sm shadow-sm"
+            className="h-10 w-10 overflow-hidden rounded-lg border border-amber-100 bg-white"
           >
-            {character.icon}
-          </span>
+            <img
+              src={character.image}
+              alt={`${character.name} mascot costume`}
+              title={character.name}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
         ))}
       </div>
 

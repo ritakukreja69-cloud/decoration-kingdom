@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Clock3, MapPin, Shirt, Sparkles, Truck, UserRound } from "lucide-react";
 
-import mascotCostumes from "@/assets/mascot-costumes.png";
+import { mascotGallery } from "@/lib/mascot-gallery";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 
 const inclusions = [
@@ -94,14 +94,27 @@ export function HomeMascotSection() {
               <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.14em] text-slate-500">
                 Meet our mascot characters
               </p>
-              <div className="overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-orange-100">
-                <img
-                  src={mascotCostumes}
-                  alt="Wearable mascot costumes: Mickey, Minnie, Unicorn, Teddy Bear, Panda and Gorilla"
-                  loading="lazy"
-                  className="h-auto max-h-[34rem] w-full object-contain transition-transform duration-500 hover:scale-[1.02]"
-                />
-              </div>
+              <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label="Available mascot characters">
+                {mascotGallery.map((character, index) => (
+                  <motion.li
+                    key={character.name}
+                    whileHover={reduceMotion ? undefined : { y: -4 }}
+                    className="group overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm transition-shadow hover:shadow-lg hover:shadow-orange-900/10"
+                  >
+                    <div className={`aspect-[4/3] overflow-hidden ${index % 2 === 0 ? "bg-orange-50" : "bg-amber-50"}`}>
+                      <img
+                        src={character.image}
+                        alt={`${character.name} mascot costume`}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <p className="px-2 py-2 text-center text-xs font-extrabold text-[color:var(--purple-deep)] sm:text-sm">
+                      {character.name}
+                    </p>
+                  </motion.li>
+                ))}
+              </ul>
             </div>
 
             <div className="mt-5 grid gap-2 rounded-2xl bg-orange-50/80 p-4 text-xs leading-relaxed text-slate-600 sm:grid-cols-2 sm:text-sm">
