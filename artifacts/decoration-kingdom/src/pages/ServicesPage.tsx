@@ -20,7 +20,6 @@ const services = [
   { icon: Gem,         title: "Proposal Decoration",        img: svcProposal,   desc: "Romantic proposal stages, rose paths and surprise reveal décor.",                                    link: "/packages/collection/proposal" },
   { icon: Heart,       title: "Ring Decoration",            img: ringPackage01Image, desc: "Twelve ring decoration packages for birthdays, baby showers, anniversaries and more.",           link: "/packages/collection/ring-ceremony" },
   { icon: Sparkles,    title: "Sequin Decoration",          img: sequinHero,    desc: "Shimmer sequin walls, organic balloon garlands, neon signs and statement celebration props.",         link: "/packages/collection/sequin-decoration" },
-  { icon: Sparkles,    title: "Naming Ceremony Decoration", img: spWelcomeBaby, desc: "Festive balloon backdrops and welcoming décor for a memorable naming ceremony.",                       link: "/packages/collection/naming-ceremony" },
   { icon: PartyPopper, title: "Kids Theme Decoration",      img: spKids,        desc: "Fun theme décor, character props and playful balloon arrangements.",                                 link: "/kids-themes" },
 ];
 

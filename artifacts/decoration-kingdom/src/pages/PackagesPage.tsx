@@ -60,7 +60,7 @@ export function PackagesPage() {
       <main className="py-16 md:py-24 bg-gradient-soft">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {categories.map((cat, i) => (
+            {categories.filter((cat) => cat.id !== "naming-ceremony").map((cat, i) => (
               <CollectionBanner key={cat.id} category={cat} index={i} />
             ))}
           </div>
