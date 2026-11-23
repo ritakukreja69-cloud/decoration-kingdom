@@ -101,12 +101,12 @@ export function HomeMascotSection() {
                     whileHover={reduceMotion ? undefined : { y: -4 }}
                     className="group overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm transition-shadow hover:shadow-lg hover:shadow-orange-900/10"
                   >
-                    <div className={`aspect-[4/3] overflow-hidden ${index % 2 === 0 ? "bg-orange-50" : "bg-amber-50"}`}>
+                    <div className={`aspect-[4/3] ${index % 2 === 0 ? "bg-orange-50" : "bg-amber-50"}`}>
                       <img
                         src={character.image}
                         alt={`${character.name} mascot costume`}
                         loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full object-contain"
                       />
                     </div>
                     <p className="px-2 py-2 text-center text-xs font-extrabold text-[color:var(--purple-deep)] sm:text-sm">

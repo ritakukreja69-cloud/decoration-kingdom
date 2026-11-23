@@ -42,7 +42,7 @@ export function MascotBookingLink({ packageName }: { packageName: string }) {
               alt={`${character.name} mascot costume`}
               title={character.name}
               loading="lazy"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </div>
         ))}
