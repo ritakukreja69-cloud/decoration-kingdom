@@ -33,11 +33,11 @@ export function HomeMascotSection() {
         transition={{ duration: reduceMotion ? 0 : 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="relative mx-auto max-w-7xl px-4"
       >
-        <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.9fr] lg:gap-14">
-          <div>
+        <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
+          <div className="text-left">
             <span className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white/80 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-orange-700 shadow-sm">
               <Sparkles className="h-4 w-4 text-amber-500" />
-              A little extra party magic
+              Inflatable Mascots
             </span>
             <h2
               id="home-mascot-title"
@@ -48,20 +48,61 @@ export function HomeMascotSection() {
                 Extra Special!
               </span>
             </h2>
-            <p className="mt-3 text-base font-semibold text-slate-600 sm:text-lg">
+            <p             className="mt-3 text-lg font-bold text-slate-700 sm:text-xl">
               Mascot booking is an optional add-on and is charged separately from your decoration package.
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              {inclusions.map(({ icon: Icon, label }) => (
-                <span
-                  key={label}
-                  className="inline-flex items-center gap-2 rounded-full border border-orange-100 bg-white/90 px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm"
-                >
-                  <Icon className="h-4 w-4 text-orange-600" />
-                  {label}
-                </span>
-              ))}
+            <div className="mt-6 rounded-3xl border border-orange-100 bg-white/90 p-5 shadow-sm sm:p-6">
+              <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-orange-600">
+                Cartoon Mascot Price
+              </p>
+              <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <p className="font-display text-5xl font-black tracking-tight text-[color:var(--purple-deep)] sm:text-6xl">
+                  ₹4,500
+                </p>
+                <p className="text-base font-extrabold text-slate-700">per mascot · up to 3 hours</p>
+              </div>
+              <p className="mt-1 text-xs font-extrabold uppercase tracking-wide text-orange-700">
+                Optional extra — not included in package price
+              </p>
+
+              <div className="mt-5 grid gap-2 sm:grid-cols-2">
+                {inclusions.map(({ icon: Icon, label }) => (
+                  <span
+                    key={label}
+                    className="inline-flex items-center gap-2 rounded-2xl bg-orange-50/80 px-3 py-3 text-base font-bold text-slate-800"
+                  >
+                    <Icon className="h-4 w-4 shrink-0 text-orange-600" />
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-4 rounded-3xl border border-amber-200/80 bg-amber-50/80 p-5 sm:p-6">
+              <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-orange-700">
+                Good to know
+              </p>
+              <div className="mt-3 grid gap-3 text-base font-medium text-slate-800 sm:grid-cols-3">
+                <p><strong className="text-slate-900">Head:</strong> Fur fabric</p>
+                <p><strong className="text-slate-900">Cloth:</strong> Fur fabric</p>
+                <p><strong className="text-slate-900">Height:</strong> 6.5 to 7 ft</p>
+              </div>
+            </div>
+
+            <div className="mt-4 grid gap-3 rounded-3xl border border-orange-100 bg-white/90 p-5 text-base font-medium leading-relaxed text-slate-700 shadow-sm sm:grid-cols-2 sm:p-6">
+              <p className="flex items-start gap-2">
+                <Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-orange-600" />
+                <span><strong className="text-slate-800">Extra hours:</strong> ₹1,000 per hour after 3 hours</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-orange-600" />
+                <span><strong className="text-slate-800">Service ends:</strong> by 10 PM</span>
+              </p>
+              <p className="flex items-start gap-2 sm:col-span-2">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-orange-600" />
+                <span>Additional travelling charges apply outside city limits.</span>
+              </p>
             </div>
 
             <a
@@ -75,61 +116,45 @@ export function HomeMascotSection() {
             </a>
           </div>
 
-          <div className="rounded-[2rem] border border-orange-100 bg-white/90 p-5 shadow-[0_24px_70px_-42px_rgba(154,75,14,0.42)] backdrop-blur-sm sm:p-7">
-            <div className="flex items-start justify-between gap-3">
+          <div>
+            <div className="mb-3 rounded-2xl bg-gradient-to-r from-red-500 to-orange-400 p-2.5">
+              <p className="w-fit rounded-full bg-amber-300 px-4 py-2 text-sm font-extrabold text-slate-900 sm:text-base">
+                Clean | Punctual | Entertaining
+              </p>
+            </div>
+            <div className="rounded-[2rem] border border-orange-100 bg-white/90 p-5 shadow-[0_24px_70px_-42px_rgba(154,75,14,0.42)] backdrop-blur-sm sm:p-7">
+            <div className="mb-5 flex items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-orange-600">Cartoon Mascot Price</p>
-                <p className="mt-2 font-display text-4xl font-black tracking-tight text-[color:var(--purple-deep)] sm:text-5xl">
-                  ₹4,500
+                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-orange-600">
+                  Meet the mascots
                 </p>
-                <p className="mt-1 text-sm font-bold text-slate-600">per mascot · up to 3 hours</p>
-                <p className="mt-1 text-xs font-extrabold uppercase tracking-wide text-orange-700">
-                  Optional extra — not included in package price
-                </p>
+                <h3 className="mt-1 font-display text-xl font-black text-[color:var(--purple-deep)] sm:text-2xl">
+                  Pick a party favorite
+                </h3>
               </div>
               <span className="rounded-2xl bg-amber-100 p-3 text-3xl" aria-hidden>🎭</span>
             </div>
-
-            <div className="mt-5 border-t border-orange-100 pt-5">
-              <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.14em] text-slate-500">
-                Meet our mascot characters
-              </p>
-              <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label="Available mascot characters">
-                {mascotGallery.map((character, index) => (
-                  <motion.li
-                    key={character.name}
-                    whileHover={reduceMotion ? undefined : { y: -4 }}
-                    className="group overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm transition-shadow hover:shadow-lg hover:shadow-orange-900/10"
-                  >
-                    <div className={`aspect-[4/3] ${index % 2 === 0 ? "bg-orange-50" : "bg-amber-50"}`}>
-                      <img
-                        src={character.image}
-                        alt={`${character.name} mascot costume`}
-                        loading="lazy"
-                        className="h-full w-full object-contain"
-                      />
-                    </div>
-                    <p className="px-2 py-2 text-center text-xs font-extrabold text-[color:var(--purple-deep)] sm:text-sm">
-                      {character.name}
-                    </p>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-5 grid gap-2 rounded-2xl bg-orange-50/80 p-4 text-xs leading-relaxed text-slate-600 sm:grid-cols-2 sm:text-sm">
-              <p className="flex items-start gap-2">
-                <Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-orange-600" />
-                <span><strong className="text-slate-800">After 3 hours:</strong> ₹1,000 per extra hour</span>
-              </p>
-              <p className="flex items-start gap-2">
-                <Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-orange-600" />
-                <span><strong className="text-slate-800">Service ends:</strong> by 10 PM</span>
-              </p>
-              <p className="flex items-start gap-2 sm:col-span-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-orange-600" />
-                <span>Additional travelling charges apply outside city limits.</span>
-              </p>
+            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label="Available mascot characters">
+              {mascotGallery.map((character, index) => (
+                <motion.li
+                  key={character.name}
+                  whileHover={reduceMotion ? undefined : { y: -4 }}
+                  className="group overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm transition-shadow hover:shadow-lg hover:shadow-orange-900/10"
+                >
+                  <div className={`aspect-[4/3] ${index % 2 === 0 ? "bg-orange-50" : "bg-amber-50"}`}>
+                    <img
+                      src={character.image}
+                      alt={`${character.name} mascot costume`}
+                      loading="lazy"
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                  <p className="px-2 py-2 text-center text-xs font-extrabold text-[color:var(--purple-deep)] sm:text-sm">
+                    {character.name}
+                  </p>
+                </motion.li>
+              ))}
+            </ul>
             </div>
           </div>
         </div>
