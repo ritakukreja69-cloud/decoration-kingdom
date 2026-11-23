@@ -15,7 +15,7 @@ export function MascotBookingLink({ packageName }: { packageName: string }) {
       <div className="flex items-start justify-between gap-2">
         <div>
           <p className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-orange-700 sm:text-xs">
-            🎭 Cartoon Mascot Price
+            🎭 Optional Cartoon Mascot Add-on
           </p>
           <p className="mt-1 text-lg font-black leading-tight text-[color:var(--purple-deep)]">
             ₹4,500 <span className="text-xs font-bold text-slate-600">per mascot</span>
@@ -23,12 +23,12 @@ export function MascotBookingLink({ packageName }: { packageName: string }) {
           <p className="text-[11px] font-semibold text-slate-600">Up to 3 hours of event service</p>
         </div>
         <span className="rounded-full bg-white px-2 py-1 text-[10px] font-extrabold text-orange-800 shadow-sm">
-          ALL INCLUDED
+          EXTRA
         </span>
       </div>
 
       <p className="mt-2 text-[11px] font-semibold leading-relaxed text-slate-700 sm:text-xs">
-        👘 Costume · 👨‍🎨 Artist · 🚆 Transport included
+        👘 Costume · 👨‍🎨 Artist · 🚆 Transport included in mascot price
       </p>
 
       <div className="mt-2 flex flex-wrap gap-1" aria-label="Available mascot character styles">

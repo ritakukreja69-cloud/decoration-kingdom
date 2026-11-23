@@ -5,9 +5,9 @@ import { mascotCharacters } from "@/lib/mascot-characters";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 
 const inclusions = [
-  { icon: Shirt, label: "Costume included" },
-  { icon: UserRound, label: "Professional artist" },
-  { icon: Truck, label: "Transport included" },
+  { icon: Shirt, label: "Costume included in mascot price" },
+  { icon: UserRound, label: "Artist included in mascot price" },
+  { icon: Truck, label: "Transport included in mascot price" },
 ];
 
 export function HomeMascotSection() {
@@ -49,7 +49,7 @@ export function HomeMascotSection() {
               </span>
             </h2>
             <p className="mt-3 text-base font-semibold text-slate-600 sm:text-lg">
-              Add a fun cartoon mascot to your event.
+              Mascot booking is an optional add-on and is charged separately from your decoration package.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
@@ -83,6 +83,9 @@ export function HomeMascotSection() {
                   ₹4,500
                 </p>
                 <p className="mt-1 text-sm font-bold text-slate-600">per mascot · up to 3 hours</p>
+                <p className="mt-1 text-xs font-extrabold uppercase tracking-wide text-orange-700">
+                  Optional extra — not included in package price
+                </p>
               </div>
               <span className="rounded-2xl bg-amber-100 p-3 text-3xl" aria-hidden>🎭</span>
             </div>
