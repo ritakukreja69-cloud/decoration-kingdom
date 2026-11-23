@@ -1010,12 +1010,12 @@ export function HomePage() {
                   whileHover={{ y: -6 }}
                   className="h-full overflow-hidden rounded-3xl border border-border/60 bg-gradient-soft shadow-card transition-shadow hover:shadow-pink"
                 >
-                  <div className="aspect-[4/5] overflow-hidden bg-white">
+                  <div className="aspect-[4/3] overflow-hidden bg-white">
                     <img
                       src={work.image}
                       alt={work.title}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="h-full w-full object-contain p-2 transition-transform duration-700 group-hover:scale-[1.02]"
                     />
                   </div>
                   <div className="p-5">
