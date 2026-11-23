@@ -12,15 +12,7 @@ export type RecentWorkItem = {
   collectionHref: string;
 };
 
-const featuredKidsPackageIds = new Set([
-  "kids-theme-2",
-  "kids-theme-5",
-  "kids-theme-7",
-  "kids-theme-8",
-]);
-
 const kidsThemeWork: RecentWorkItem[] = getPackages("kids-theme")
-  .filter((pkg) => featuredKidsPackageIds.has(pkg.id))
   .map((pkg) => ({
     slug: pkg.id,
     title: pkg.name,

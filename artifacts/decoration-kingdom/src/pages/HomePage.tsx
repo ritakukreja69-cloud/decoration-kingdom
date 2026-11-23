@@ -1003,7 +1003,10 @@ export function HomePage() {
             aria-label="Recent work"
             className="recent-work-marquee overflow-hidden"
           >
-            <div className="recent-work-track flex w-max">
+            <div
+              className="recent-work-track flex w-max"
+              style={{ animationDuration: `${recentWorkItems.length * 7.2}s` }}
+            >
               {[false, true].map((duplicate) => (
                 <div
                   key={duplicate ? "duplicate" : "original"}
