@@ -139,9 +139,6 @@ export function PrivacyPolicyPage() {
                     <a href="tel:9971265244" className="inline-flex items-center gap-2 hover:text-[color:var(--pink)]">
                       <Phone className="w-4 h-4 text-[color:var(--pink)]" /> 9971265244
                     </a>
-                    <a href="tel:9971265244" className="inline-flex items-center gap-2 hover:text-[color:var(--pink)]">
-                      <Phone className="w-4 h-4 text-[color:var(--pink)]" /> 9971265244
-                    </a>
                   </div>
                   <a href="mailto:support@decorationkingdom.com" className="inline-flex items-center gap-2 hover:text-[color:var(--pink)] break-all">
                     <Mail className="w-4 h-4 text-[color:var(--pink)]" /> support@decorationkingdom.com

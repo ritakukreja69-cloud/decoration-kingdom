@@ -7,7 +7,7 @@ import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WHATSAPP_BOOKING_URL } from "@/lib/whatsapp";
 
 const contactCards = [
-  { icon: Phone, title: "Call us", lines: ["9971265244", "9971265244"], href: "tel:9971265244", accent: "pink" },
+  { icon: Phone, title: "Call us", lines: ["9971265244"], href: "tel:9971265244", accent: "pink" },
   { icon: MessageCircle, title: "WhatsApp", lines: ["Instant reply · 24×7"], href: WHATSAPP_BOOKING_URL, accent: "green" },
   { icon: Mail, title: "Email", lines: ["support@decorationkingdom.com"], href: "mailto:support@decorationkingdom.com", accent: "purple" },
   { icon: MapPin, title: "Service area", lines: ["Delhi · Gurgaon · Noida · Faridabad · Ghaziabad"], accent: "gold" },

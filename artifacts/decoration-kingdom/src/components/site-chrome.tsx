@@ -121,8 +121,8 @@ export function SiteFooter() {
           <ul className="space-y-2 text-white/70">
             <li><a href="mailto:support@decorationkingdom.com" className="hover:text-[color:var(--pink)]">support@decorationkingdom.com</a></li>
             <li><a href="https://decorationkingdom.com" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--pink)]">decorationkingdom.com</a></li>
-            <li>Delhi & NCR</li>
-            <li><a href="tel:9971265244" className="hover:text-[color:var(--pink)]">9971265244</a> / <a href="tel:9971265244" className="hover:text-[color:var(--pink)]">9971265244</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Delhi%20NCR" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--pink)]">Delhi & NCR</a></li>
+            <li><a href="tel:9971265244" className="hover:text-[color:var(--pink)]">9971265244</a></li>
           </ul>
         </div>
         <div>

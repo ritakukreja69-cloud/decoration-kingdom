@@ -1115,8 +1115,7 @@ export function HomePage() {
             </div>
             <div className="text-sm">
               <div className="text-white/70">Call Us Now</div>
-              <div className="font-bold text-[color:var(--gold)]">9971265244</div>
-              <div className="font-bold text-[color:var(--gold)]">9971265244</div>
+              <a href="tel:9971265244" className="font-bold text-[color:var(--gold)] hover:underline">9971265244</a>
             </div>
           </div>
 
@@ -1170,7 +1169,7 @@ export function HomePage() {
                 { label: "Contact Us", to: "/contact" },
                 { label: "Privacy Policy", to: "/privacy-policy" },
               ].map(({ label, to }) => (
-                <li key={label}><a href={to} className="hover:text-[color:var(--pink)]">{label}</a></li>
+                <li key={label}><Link href={to} className="hover:text-[color:var(--pink)]">{label}</Link></li>
               ))}
             </ul>
           </div>
@@ -1180,21 +1179,21 @@ export function HomePage() {
               <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-[color:var(--pink)]" /> <a href="mailto:support@decorationkingdom.com" className="hover:text-[color:var(--pink)]">support@decorationkingdom.com</a></li>
               <li className="flex items-center gap-2"><BadgeCheck className="w-4 h-4 text-[color:var(--pink)]" /> <a href="https://decorationkingdom.com" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--pink)]">decorationkingdom.com</a></li>
               <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-[color:var(--pink)]" /> <a href="https://www.google.com/maps/search/?api=1&amp;query=Delhi%20NCR" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--pink)]">Delhi &amp; NCR</a></li>
-              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-[color:var(--pink)]" /> <a href="tel:9971265244" className="hover:text-[color:var(--pink)]">9971265244</a> / <a href="tel:9971265244" className="hover:text-[color:var(--pink)]">9971265244</a></li>
+              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-[color:var(--pink)]" /> <a href="tel:9971265244" className="hover:text-[color:var(--pink)]">9971265244</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-3">Follow Us</h4>
             <div className="flex gap-3">
-              <a href="#" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-[color:var(--pink)] transition-colors"><Facebook className="w-4 h-4" /></a>
+              <a href="https://www.facebook.com/share/19Bqsvf6QC/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-[color:var(--pink)] transition-colors"><Facebook className="w-4 h-4" /></a>
               <a href="https://www.instagram.com/decorationkingdomdelhincr?utm_source=qr&igsh=NHp0bHZvZmM2dmd1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-[color:var(--pink)] transition-colors"><Instagram className="w-4 h-4" /></a>
-              <a href="https://wa.me/919971265244" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-[#25D366] transition-colors"><MessageCircle className="w-4 h-4" /></a>
+              <a href={WHATSAPP_BOOKING_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-[#25D366] transition-colors"><MessageCircle className="w-4 h-4" /></a>
             </div>
           </div>
         </div>
         <div className="mx-auto max-w-7xl px-4 mt-8 pt-4 border-t border-white/10 text-xs text-white/50 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>© {new Date().getFullYear()} Decoration Kingdom. All rights reserved.</span>
-          <a href="/privacy-policy" className="hover:text-[color:var(--pink)] transition-colors">Privacy Policy</a>
+          <Link href="/privacy-policy" className="hover:text-[color:var(--pink)] transition-colors">Privacy Policy</Link>
         </div>
         <div className="mt-3 text-center text-[10px] tracking-wide text-white/35">
           Website made by Web Bazar ·{" "}
